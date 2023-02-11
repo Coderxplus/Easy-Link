@@ -1,0 +1,34 @@
+{% load static %}
+ 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta content="this site is for getting tthe ceapset deals you can find">
+    <title style="color:green">EasyLink</title>
+</head>
+    <nav>
+        <span>
+            <img src="{% static 'assets/logo.jpg' %}" alt="My image" width="200">
+            <a class="Home" href="login_page.html"><big>Login</big></a>
+            <a class="others" href="">About Us</a>
+             <a class="others" href=""><big>Help</big></a>
+           <input type="text" placeholder="search"><input type="submit" name="">
+        </span>
+        </nav>
+<body>
+    <h1>Welcome to EasyLink</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="input item" name="Item">
+        <input type="number" placeholder="input price" name="Price">
+        <div><input type="submit"  placeholder="Search"></div>
+    </form>
+
+<div>
+      <h3 style="color:red">{{i}}</h3>
+</div>
+    
+</body>
+</html>
